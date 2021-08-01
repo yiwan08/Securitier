@@ -106,6 +106,9 @@
 				background-color: white;
 				color: white;
 			}
+			#passwordResult {
+				background-color:; "blue";
+			}
 		</style>
 	</head>
 
@@ -132,17 +135,17 @@
 
 			<script type="text/javascript">
 				function passwordCheck() {
-					var number = true;
-					var specialCharacter = true;
-					var len = 0;
-					var upAndLow = true;
-					var letterStart = true;
-
-					var numbersOnly = false;
-					var lettersOnly = false;
-
 					var pass = document.getElementById("passIn")
 						.value;
+
+					var number = containsNumber(pass);
+					var specialCharacter = containsSpecialCharacters(pass);
+					var len = pass.length;
+					var upAndLow = upperAndLower(pass);
+					var letterStart = startLetter(pass);
+
+					var numbersOnly = onlyNumbers(pass);
+					var lettersOnly = onlyLetters(pass);
 
 					if (passLen(pass) && startLetter(pass) && containsNumber(pass) &&
 						containsSpecialCharacters(pass) && upperAndLower(pass)) {
@@ -185,6 +188,23 @@
 					}
 				}
 
+				function onlyLetters(password) {
+					var low = 0;
+					var up = 0;
+					for (let i = 0; i < password.length; i++) {
+						if (password.charCodeAt(i) >= 65 && password.charCodeAt(i) <= 90) {
+							up++;
+						} else if (password.charCodeAt(i) >= 97 && password.charCodeAt(i) <= 122) {
+							low++;
+						}
+					}
+					if (low == password.length || up == password.length) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+
 				function startLetter(password) {
 					if (password.charCodeAt(0) >= 65 && password.charCodeAt(0) <= 122) {
 						return true;
@@ -197,13 +217,23 @@
 					var count = 0;
 					for (let i = 0; i < password.length; i++) {
 						if (password.charCodeAt(i) >= 48 && password.charCodeAt(i) <= 57) {
+							return true;
+						}
+					}
+					return false;
+				}
+
+				function onlyNumbers(password) {
+					var count = 0;
+					for (let i = 0; i < password.length; i++) {
+						if (password.charCodeAt(i) >= 48 && password.charCodeAt(i) <= 57) {
 							count++;
 						}
 					}
 					if (count = password.length) {
-						numbersOnly = true;
+						return true;
 					}
-					return count >= 1;
+					return false;
 				}
 
 				function containsSpecialCharacters(password) {
@@ -231,9 +261,6 @@
 						} else if (password.charCodeAt(i) >= 97 && password.charCodeAt(i) <= 122) {
 							low++;
 						}
-					}
-					if (low = password.length) {
-						lettersOnly = true;
 					}
 					return (up > 0 && low > 0);
 				}
@@ -393,7 +420,6 @@
 					}
 					document.getElementById("hacking")
 						.innerHTML = result;
-					//alert(result);
 				}
 			</script>
 			<br>
