@@ -130,8 +130,8 @@
 
 			<h3 id="passwordResult" style="color: #0c0c34; font-size: 30px"> Your Password strength shows up here! </h3>
 
-			<h4 id="hacking" style="color: #0c0c34; font-size: 30px"> How long will it take for a Hacker to crack your password? </h4>
-			<h4 id="passwordErrors" style="color: #0c0c34; font-size: 30px"> </h4>
+			<h4 id="hacking" style="color: #c30b19; font-size: 30px"> How long will it take for a Hacker to crack your password? </h4>
+			<h4 id="passwordErrors" style="color: #0c0c34; font-size: 30px; background-color: white; padding-top: 10px; padding-bottom: 10px"> </h4>
 
 			<script type="text/javascript">
 				function passwordCheck() {
@@ -268,7 +268,7 @@
 				function hackingTime(number, upAndLow, specialCharacter, lettersOnly, len) {
 					var result = "";
 					if (len < 6) {
-						result = "Instantly!";
+						result = "Hacking time: Instantly!";
 					} else if (len == 6) {
 						if (number && upAndLow && specialCharacter) {
 							result = "Hacking time: 5 seconds!";
