@@ -8,15 +8,16 @@
 			body {
 				padding: 0px;
 				margin: 0px;
+				background-color: #A0DBF0;
 			}
 
-			.multicolortext {
+			/*.multicolortext {
 				background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
 				-webkit-background-clip: text;
 				-moz-background-clip: text;
 				background-clip: text;
 				color: transparent;
-			}
+			}*/
 
 			h1 {
 				font-size: 72px;
@@ -24,11 +25,6 @@
 				height: 50px;
 				background-color: linear-gradient(violet, indigo, green, blue, yellow, orange, red);
 				padding-top: 1rem;
-			}
-
-			form {
-				background-color: #9D4F36;
-
 			}
 
 			input[type=password] {
@@ -50,6 +46,8 @@
 				display: inline;
 				margin: 1rem 0rem 1rem 31.5rem;
 				border-radius: 10px;
+				background-color: #0c0c34;
+				color: white;
 
 			}
 
@@ -119,7 +117,7 @@
 			<a href="about.html">About</a>
 		</nav>
 		<h1>
-			<span class="multicolortext">Securitier</span>
+			<p style="color: #0c0c34">Securitier</p>
 		</h1>
 		<form>
 			<input id="passIn" type="password" align="center" placeholder='Enter your password here'>
@@ -127,10 +125,10 @@
 			<button onclick="passwordCheck()" id="bt1" type="button"> Submit </button>
 
 
-			<h3 id="passwordResult"> Your Password strength shows up here! </h3>
+			<h3 id="passwordResult" style="color: #0c0c34; font-size: 30px"> Your Password strength shows up here! </h3>
 
-			<h4 id="hacking"> How long will it take for a Hacker to crack your password? </h4>
-			<h4 id="passwordErrors"> </h4>
+			<h4 id="hacking" style="color: #0c0c34; font-size: 30px"> How long will it take for a Hacker to crack your password? </h4>
+			<h4 id="passwordErrors" style="color: #0c0c34; font-size: 30px"> </h4>
 
 			<script type="text/javascript">
 				function passwordCheck() {
