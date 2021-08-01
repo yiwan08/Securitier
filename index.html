@@ -10,14 +10,24 @@
 				margin: 0px;
 			}
 
+ .multicolortext {
+        background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
 			h1 {
 				font-size: 72px;
 				text-align: center;
-				padding-top: 2rem;
+				height:50px;
+				background-color:linear-gradient(violet, indigo, green, blue, yellow, orange, red);
+				padding-top: 1rem;
 			}
 
 			form {
 				background-color: #9D4F36;
+				
 			}
 
 			input[type=password] {
@@ -44,7 +54,18 @@
 
 			header {
 				background-color: #0c0c34;
-				/*box-shadow: 0px 4px 8px 2px #0c0c34;*/
+				height:30px;
+			/*	box-shadow: 0px 4px 8px 2px #0c0c34;*/
+			}
+			
+			h3{
+				text-align: center;
+				color:lightyellow;
+				
+			}
+			h4{
+				text-align: center;
+				 color:lightyellow;
 			}
 
 			footer {
@@ -75,7 +96,7 @@
 
 			/* Change the color of links on hover */
 			.topnav a:hover {
-				background-color: black;
+				background-color: white;
 				color: black;
 			}
 
@@ -90,19 +111,21 @@
 	<body>
 		<header>
 			<nav class="topnav">
-				<img src="logo1.png" alt="logo" width="200px" height="100px">
+				<img src="security1.jpg" alt="logo" width="50px" height="50px">
 				<a href="index.html">Home</a>
 			</nav>
 
 		</header>
-		<h1>Securitier</h1>
+		<h1>
+			<span class="multicolortext">Securitier</span>
+			</h1>
 		<form>
 			<input id="passIn" type="password" align="center" placeholder='Enter your password here'>
 			<br>
 			<button onclick="passwordCheck()" id="bt1" type="button"> Submit </button>
 
 
-			<h3 id="passwordResult"> Your Password strength shows up here! </h3>
+			<h3 id="passwordResult" > Your Password strength shows up here! </h3>
 			
 			<h4 id="hacking"> How long will it take for a Hacker to crack your password? </h4>
 			<h4 id="passwordErrors"> </h4>
@@ -370,11 +393,15 @@
 					}
 					document.getElementById("hacking")
 						.innerHTML = result;
-						alert(result);
+						//alert(result);
 				}
 			</script>
+			<br>
+			<br>
+			<br>
+			<br>
 			<footer>
-				<p>@ 2021 By (Sven, Sani, & Mickey) | GSBHacks</p>
+				<p>@ 2021 By (Sven, Sani, & Maitreyee) | GSBHacks</p>
 			</footer>
 
 	</body>
