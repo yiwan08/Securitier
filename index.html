@@ -10,24 +10,25 @@
 				margin: 0px;
 			}
 
- .multicolortext {
-        background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        color: transparent;
-      }
+			.multicolortext {
+				background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+				-webkit-background-clip: text;
+				-moz-background-clip: text;
+				background-clip: text;
+				color: transparent;
+			}
+
 			h1 {
 				font-size: 72px;
 				text-align: center;
-				height:50px;
-				background-color:linear-gradient(violet, indigo, green, blue, yellow, orange, red);
+				height: 50px;
+				background-color: linear-gradient(violet, indigo, green, blue, yellow, orange, red);
 				padding-top: 1rem;
 			}
 
 			form {
 				background-color: #9D4F36;
-				
+
 			}
 
 			input[type=password] {
@@ -54,18 +55,19 @@
 
 			header {
 				background-color: #0c0c34;
-				height:30px;
-			/*	box-shadow: 0px 4px 8px 2px #0c0c34;*/
+				height: 30px;
+				/*	box-shadow: 0px 4px 8px 2px #0c0c34;*/
 			}
-			
-			h3{
+
+			h3 {
 				text-align: center;
-				color:lightyellow;
-				
+				color: lightyellow;
+
 			}
-			h4{
+
+			h4 {
 				text-align: center;
-				 color:lightyellow;
+				color: lightyellow;
 			}
 
 			footer {
@@ -81,7 +83,7 @@
 			.topnav {
 				background-color: #0c0c34;
 				overflow: hidden;
-				padding: 18px 18px
+				padding: 20px 18px 2px;
 			}
 
 			/* Style the links inside the navigation bar */
@@ -89,14 +91,15 @@
 				float: right;
 				color: white;
 				text-align: center;
-				padding: 10px 10px;
+				margin: 25px 25px 10px 25px;
+				padding: 15px 25px 15px 25px;
 				text-decoration: none;
 				font-size: 25px;
 			}
 
 			/* Change the color of links on hover */
 			.topnav a:hover {
-				background-color: white;
+				background-color: White;
 				color: black;
 			}
 
@@ -109,26 +112,23 @@
 	</head>
 
 	<body>
-		<header>
-			<nav class="topnav">
-				<img src="security1.jpg" alt="logo" width="50px" height="50px">
-				<a href="index.html">Home</a>
-				<a href="about.html">About</a>
-				<a href="info.html">Why Stronger Password?</a>
-			</nav>
-
-		</header>
+		<nav class="topnav">
+			<img src="logo1.png" alt="logo" width="200px" height="100px">
+			<a href="index.html">Home</a>
+			<a href="info.html">Why Stronger Password?</a>
+			<a href="about.html">About</a>
+		</nav>
 		<h1>
 			<span class="multicolortext">Securitier</span>
-			</h1>
+		</h1>
 		<form>
 			<input id="passIn" type="password" align="center" placeholder='Enter your password here'>
 			<br>
 			<button onclick="passwordCheck()" id="bt1" type="button"> Submit </button>
 
 
-			<h3 id="passwordResult" > Your Password strength shows up here! </h3>
-			
+			<h3 id="passwordResult"> Your Password strength shows up here! </h3>
+
 			<h4 id="hacking"> How long will it take for a Hacker to crack your password? </h4>
 			<h4 id="passwordErrors"> </h4>
 
@@ -246,156 +246,156 @@
 						result = "Instantly!";
 					} else if (len == 6) {
 						if (number && upAndLow && specialCharacter) {
-							result = "5 seconds!";
+							result = "Hacking time: 5 seconds!";
 						} else if (number && upAndLow) {
-							result = "1 second!";
+							result = "Hacking time: 1 second!";
 						} else {
-							result = "Instantly!";
+							result = "Hacking time: Instantly!";
 						}
 					} else if (len = 7) {
 						if (number && upAndLow && specialCharacter) {
-							result = "6 minutes!";
+							result = "Hacking time: 6 minutes!";
 						} else if (number && upAndLow) {
-							result = "1 minute!";
+							result = "Hacking time: 1 minute!";
 						} else {
-							result = "Instantly!";
+							result = "Hacking time: Instantly!";
 						}
 					} else if (len = 8) {
 						if (number && upAndLow && specialCharacter) {
-							result = "8 hours!";
+							result = "Hacking time: 8 hours!";
 						} else if (number && upAndLow) {
-							result = "1 hour!";
+							result = "Hacking time: 1 hour!";
 						} else if (upAndLow) {
-							result = "22 minutes!";
+							result = "Hacking time: 22 minutes!";
 						} else if (lettersOnly) {
-							result = "5 seconds!";
+							result = "Hacking time: 5 seconds!";
 						} else {
-							result = "Instantly!";
+							result = "Hacking time: Instantly!";
 						}
 					} else if (len = 9) {
 						if (number && upAndLow && specialCharacter) {
-							result = "3 weeks!";
+							result = "Hacking time: 3 weeks!";
 						} else if (number && upAndLow) {
-							result = "3 days!";
+							result = "Hacking time: 3 days!";
 						} else if (upAndLow) {
-							result = "19 hours!";
+							result = "Hacking time: 19 hours!";
 						} else if (lettersOnly) {
-							result = "2 minutes!";
+							result = "Hacking time: 2 minutes!";
 						} else {
-							result = "Instantly!";
+							result = "Hacking time: Instantly!";
 						}
 					} else if (len = 10) {
 						if (number && upAndLow && specialCharacter) {
-							result = "5 years!";
+							result = "Hacking time: 5 years!";
 						} else if (number && upAndLow) {
-							result = "7 months!";
+							result = "Hacking time: 7 months!";
 						} else if (upAndLow) {
-							result = "1 month!";
+							result = "Hacking time: 1 month!";
 						} else if (lettersOnly) {
-							result = "58 minutes!";
+							result = "Hacking time: 58 minutes!";
 						} else {
-							result = "Instantly!";
+							result = "Hacking time: Instantly!";
 						}
 					} else if (len = 11) {
 						if (number && upAndLow && specialCharacter) {
-							result = "400 years!";
+							result = "Hacking time: 400 years!";
 						} else if (number && upAndLow) {
-							result = "41 years!";
+							result = "Hacking time: 41 years!";
 						} else if (upAndLow) {
-							result = "5 years!";
+							result = "Hacking time: 5 years!";
 						} else if (lettersOnly) {
-							result = "1 day!";
+							result = "Hacking time: 1 day!";
 						} else {
 							result = "2 seconds!";
 						}
 					} else if (len = 12) {
 						if (number && upAndLow && specialCharacter) {
-							result = "34,000 years!";
+							result = "Hacking time: 34,000 years!";
 						} else if (number && upAndLow) {
-							result = "2000 years!";
+							result = "Hacking time: 2000 years!";
 						} else if (upAndLow) {
-							result = "300 years!";
+							result = "Hacking time: 300 years!";
 						} else if (lettersOnly) {
-							result = "3 weeks!";
+							result = "Hacking time: 3 weeks!";
 						} else {
-							result = "25 seconds!";
+							result = "Hacking time: 25 seconds!";
 						}
 					} else if (len = 13) {
 						if (number && upAndLow && specialCharacter) {
-							result = "2 million years!";
+							result = "Hacking time: 2 million years!";
 						} else if (number && upAndLow) {
-							result = "100,000 years!";
+							result = "Hacking time: 100,000 years!";
 						} else if (upAndLow) {
-							result = "16,000 years!";
+							result = "Hacking time: 16,000 years!";
 						} else if (lettersOnly) {
-							result = "1 year!";
+							result = "Hacking time: 1 year!";
 						} else {
-							result = "4 minutes!";
+							result = "Hacking time: 4 minutes!";
 						}
 					} else if (len = 14) {
 						if (number && upAndLow && specialCharacter) {
-							result = "200 million years!";
+							result = "Hacking time: 200 million years!";
 						} else if (number && upAndLow) {
-							result = "9 million years!";
+							result = "Hacking time: 9 million years!";
 						} else if (upAndLow) {
-							result = "800,000 years!";
+							result = "Hacking time: 800,000 years!";
 						} else if (lettersOnly) {
-							result = "51 years!";
+							result = "Hacking time: 51 years!";
 						} else {
-							result = "41 minutes!";
+							result = "Hacking time: 41 minutes!";
 						}
 					} else if (len = 15) {
 						if (number && upAndLow && specialCharacter) {
-							result = "15 billion years!";
+							result = "Hacking time: 15 billion years!";
 						} else if (number && upAndLow) {
-							result = "600 million years!";
+							result = "Hacking time: 600 million years!";
 						} else if (upAndLow) {
-							result = "43 million years!";
+							result = "Hacking time: 43 million years!";
 						} else if (lettersOnly) {
-							result = "1000 years!";
+							result = "Hacking time: 1000 years!";
 						} else {
-							result = "6 hours!";
+							result = "Hacking time: 6 hours!";
 						}
 					} else if (len = 16) {
 						if (number && upAndLow && specialCharacter) {
-							result = "1 trillion years!";
+							result = "Hacking time: 1 trillion years!";
 						} else if (number && upAndLow) {
-							result = "37 billion years!";
+							result = "Hacking time: 37 billion years!";
 						} else if (upAndLow) {
-							result = "2 billlion years!";
+							result = "Hacking time: 2 billlion years!";
 						} else if (lettersOnly) {
-							result = "37,000 years!";
+							result = "Hacking time: 37,000 years!";
 						} else {
-							result = "2 days!";
+							result = "Hacking time: 2 days!";
 						}
 					} else if (len = 17) {
 						if (number && upAndLow && specialCharacter) {
-							result = "93 trillion years!";
+							result = "Hacking time: 93 trillion years!";
 						} else if (number && upAndLow) {
-							result = "2 trillion years!";
+							result = "Hacking time: 2 trillion years!";
 						} else if (upAndLow) {
-							result = "100 billion years!";
+							result = "Hacking time: 100 billion years!";
 						} else if (lettersOnly) {
-							result = "800,000 years!";
+							result = "Hacking time: 800,000 years!";
 						} else {
-							result = "4 weeks!";
+							result = "Hacking time: 4 weeks!";
 						}
 					} else if (len = 18) {
 						if (number && upAndLow && specialCharacter) {
-							result = "7 quadrillion years!";
+							result = "Hacking time: 7 quadrillion years!";
 						} else if (number && upAndLow) {
-							result = "100 trillion years!";
+							result = "Hacking time: 100 trillion years!";
 						} else if (upAndLow) {
-							result = "6 trillion years!";
+							result = "Hacking time: 6 trillion years!";
 						} else if (lettersOnly) {
-							result = "23 million years!";
+							result = "Hacking time: 23 million years!";
 						} else {
-							result = "9 months!";
+							result = "Hacking time: 9 months!";
 						}
 					}
 					document.getElementById("hacking")
 						.innerHTML = result;
-						//alert(result);
+					//alert(result);
 				}
 			</script>
 			<br>
